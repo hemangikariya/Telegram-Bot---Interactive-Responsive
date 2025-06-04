@@ -11,7 +11,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Bot is running!"
+    return '''
+    <html>
+    <head><title>Telegram Bot</title></head>
+    <body style="text-align: center; font-family: Arial;">
+        <h1>🤖 Bot is Running!</h1>
+        <a href="https://t.me/TeleSmartPy_Bot" target="_blank" style="padding: 10px 20px; background-color: #0088cc; color: white; border-radius: 5px; text-decoration: none;">
+            💬 Chat with our Telegram Bot
+        </a>
+    </body>
+    </html>
+    '''
+
 
 @app.route('/', methods=["POST"])
 def webhook():
