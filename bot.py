@@ -14,10 +14,15 @@ def index():
       return '''
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Telegram Bot - Interactive & Responsive</title>
   <style>
-    body {
+      * {
+      box-sizing: border-box;
+    }
+
+   body {
       margin: 0;
       padding: 0;
       background: linear-gradient(135deg, #f0f0f0, #cceeff);
@@ -27,28 +32,29 @@ def index():
       align-items: center;
       justify-content: center;
       height: 100vh;
+      text-align: center;
     }
 
     .container {
       background-color: #ffffff;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      max-width: 400px;
-      width: 90%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      max-width: 90%;
+      width: 400px;
+      margin: 10px;
     }
 
     h1 {
       color: #222;
       margin-bottom: 10px;
+       padding: 10px;
     }
-
-    h2 {
+     
+    .container h2 {
       color: #555;
-      margin-bottom: 25px;
       font-size: 18px;
-      font-weight: normal;
+      margin-bottom: 25px;
     }
 
     a.telegram-btn {
@@ -66,6 +72,25 @@ def index():
     a.telegram-btn:hover {
       background-color: #0077b3;
     }
+
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      .container h2 {
+        font-size: 16px;
+      }
+
+      .telegram-btn {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -81,9 +106,7 @@ def index():
 
 </body>
 </html>
-
-    '''
-
+'''
 
 @app.route('/', methods=["POST"])
 def webhook():
