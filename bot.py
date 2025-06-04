@@ -13,7 +13,7 @@ app = Flask(__name__)
 def index():
     return "Bot is running!"
 
-@app.route(f"/{TOKEN}", methods=["POST"])
+@app.route('/', methods=["POST"])
 def webhook():
     data = request.get_json()
 
