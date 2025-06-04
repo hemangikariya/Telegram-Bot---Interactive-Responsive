@@ -11,16 +11,77 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '''
-    <html>
-    <head><title>Telegram Bot</title></head>
-    <body style="text-align: center; font-family: Arial;">
-        <h1>🤖 Bot is Running!</h1>
-        <a href="https://t.me/TeleSmartPy_Bot" target="_blank" style="padding: 10px 20px; background-color: #0088cc; color: white; border-radius: 5px; text-decoration: none;">
-            💬 Chat with our Telegram Bot
-        </a>
-    </body>
-    </html>
+      return '''
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Telegram Bot - Interactive & Responsive</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f0f0f0, #cceeff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #555;
+      margin-bottom: 25px;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    a.telegram-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #0088cc;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 136, 204, 0.3);
+    }
+
+    a.telegram-btn:hover {
+      background-color: #0077b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Telegram Bot - Interactive & Responsive</h1>
+</hr>
+  <div class="container">
+    <h2>🤖 Bot is Running!</h2>
+    <a href="https://t.me/TeleSmartPy_Bot" target="_blank" class="telegram-btn">
+      💬 Chat with our Telegram Bot
+    </a>
+  </div>
+
+</body>
+</html>
+
     '''
 
 
