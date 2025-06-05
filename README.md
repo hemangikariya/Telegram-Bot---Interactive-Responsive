@@ -82,7 +82,9 @@ The homepage (/) includes:
 
 ## 🙋‍♀️ Author
 Made with ❤️ by Hemangi Kariya
+
 GitHub: www.github.com/hemangikariya
+
 LinkedIn: www.linkedin.com/in/hemangikariya
 
 ---
